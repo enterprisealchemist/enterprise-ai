@@ -2,7 +2,7 @@
   "name": "ai-presentation",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/enterprisealchemist/enterprise-ai",
+  "homepage": "https://enterprisealchemist.github.io/enterprise-ai",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -16,6 +16,7 @@
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.25.1",
     "react-scripts": "5.0.1",
+    "save-dev": "^0.0.1-security",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
@@ -23,7 +24,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +48,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
+    "gh-pages": "^6.1.1",
     "postcss": "^8.4.39",
     "tailwindcss": "^3.4.6"
   }
