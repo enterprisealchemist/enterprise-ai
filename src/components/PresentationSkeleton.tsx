@@ -1,8 +1,14 @@
 import React from 'react';
+import { SlideProps } from '../types';
 import { ChevronLeft, ChevronRight, Download } from 'lucide-react';
 
+interface SlideData {
+  component: React.FC<SlideProps>;
+  props: SlideProps;
+}
+
 interface PresentationSkeletonProps {
-  slides: Array<{ title: string; duration: string }>;
+  slides: Array<SlideData>;
   currentSlide: number;
   setCurrentSlide: React.Dispatch<React.SetStateAction<number>>;
 }
@@ -19,7 +25,7 @@ const PresentationSkeleton: React.FC<PresentationSkeletonProps> = ({ slides, cur
   const exportToText = () => {
     let output = "The Role of AI in Enhancing Enterprise Software Solutions\n\n";
     slides.forEach((slide, index) => {
-      output += `${index + 1}. ${slide.title} (${slide.duration})\n`;
+      output += `${index + 1}. ${slide.props.title}\n`;
     });
     
     const blob = new Blob([output], { type: 'text/plain' });
@@ -31,15 +37,16 @@ const PresentationSkeleton: React.FC<PresentationSkeletonProps> = ({ slides, cur
     URL.revokeObjectURL(url);
   };
 
+  const CurrentSlide = slides[currentSlide].component;
+
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-      <div className="bg-white rounded-lg shadow-lg p-8 w-3/4 h-3/4 flex flex-col justify-between">
-        <div>
-          <h1 className="text-3xl font-bold mb-4">The Role of AI in Enhancing Enterprise Software Solutions</h1>
-          <h2 className="text-xl font-semibold mb-2">{slides[currentSlide].title}</h2>
-          <p className="text-gray-600">Duration: {slides[currentSlide].duration}</p>
+    <div className="flex flex-col items-center justify-center h-screen bg-gray-100 p-4">
+      <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-4xl h-full flex flex-col">
+        <h1 className="text-2xl md:text-3xl font-bold mb-4">The Role of AI in Enhancing Enterprise Software Solutions</h1>
+        <div className="flex-grow overflow-auto mb-4">
+          <CurrentSlide {...slides[currentSlide].props} />
         </div>
-        <div className="flex justify-between items-center mt-8">
+        <div className="flex justify-between items-center mt-auto">
           <button onClick={prevSlide} className="bg-blue-500 text-white p-2 rounded-full">
             <ChevronLeft size={24} />
           </button>
