@@ -1,5 +1,5 @@
 import React from 'react';
-import { SlideProps } from "../types";
+import { SlideProps } from "../../types";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { AlertCircle } from 'lucide-react';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { SlideProps } from "../types";
+import { SlideProps } from "../../types";
 import { Building, Zap, DollarSign, BarChart } from 'lucide-react';
 
 const CaseStudySlide: React.FC<SlideProps> = ({ title }) => {

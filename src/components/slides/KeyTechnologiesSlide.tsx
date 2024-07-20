@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SlideProps } from "../types";
+import { SlideProps } from "../../types";
 import { Zap, MessageSquare, TrendingUp, Eye, Bot } from 'lucide-react';
 
 const KeyTechnologiesSlide: React.FC<SlideProps> = ({ title }) => {

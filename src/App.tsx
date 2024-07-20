@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import PresentationSkeleton from './components/PresentationSkeleton';
-import IntroductionSlide from './components/IntroductionSlide';
-import CurrentStateSlide from './components/CurrentStateSlide';
-import KeyTechnologiesSlide from './components/KeyTechnologiesSlide';
-import TransformativeImpactSlide from './components/TransformativeImpactSlide';
-import CaseStudySlide from './components/CaseStudySlide';
-import AlchemicalApproachSlide from './components/AlchemicalApproachSlide';
-import FutureTrendsSlide from './components/FutureTrendsSlide';
-import ConclusionSlide from './components/ConclusionSlide';
-import QASlide from './components/QASlide';
+import PresentationSkeleton from './components/slides/PresentationSkeleton';
+import IntroductionSlide from './components/slides/IntroductionSlide';
+import CurrentStateSlide from './components/slides/CurrentStateSlide';
+import KeyTechnologiesSlide from './components/slides/KeyTechnologiesSlide';
+import TransformativeImpactSlide from './components/slides/TransformativeImpactSlide';
+import CaseStudySlide from './components/slides/CaseStudySlide';
+import AlchemicalApproachSlide from './components/slides/AlchemicalApproachSlide';
+import FutureTrendsSlide from './components/slides/FutureTrendsSlide';
+import ConclusionSlide from './components/slides/ConclusionSlide';
+import QASlide from './components/slides/QASlide';
 
 const App: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);

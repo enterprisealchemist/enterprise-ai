@@ -1,5 +1,5 @@
 import React from 'react';
-import { SlideProps } from "../types";
+import { SlideProps } from "../../types";
 import { Beaker, ArrowRight, Brain, Lightbulb, Users, Sparkles } from 'lucide-react';
 
 const AlchemicalApproachSlide: React.FC<SlideProps> = ({ title }) => {

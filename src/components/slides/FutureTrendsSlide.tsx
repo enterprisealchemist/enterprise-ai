@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SlideProps } from "../types";
+import { SlideProps } from "../../types";
 import { Atom, Shield, Cpu } from 'lucide-react';
 
 type TrendCategory = 'emerging' | 'ethical' | 'strategic';

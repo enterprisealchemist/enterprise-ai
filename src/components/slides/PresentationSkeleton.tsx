@@ -1,5 +1,5 @@
 import React from 'react';
-import { SlideProps } from '../types';
+import { SlideProps } from '../../types';
 import { ChevronLeft, ChevronRight, Download } from 'lucide-react';
 
 interface SlideData {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { SlideProps } from "../types";
+import { SlideProps } from "../../types";
 import { Database, AlertTriangle, TrendingUp } from 'lucide-react';
 
 const CurrentStateSlide: React.FC<SlideProps> = ({ title }) => {

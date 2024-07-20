@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SlideProps } from "../types";
+import { SlideProps } from "../../types";
 import { HelpCircle, MessageCircle, ChevronDown, ChevronUp } from 'lucide-react';
 
 const QASlide: React.FC<SlideProps> = ({ title }) => {

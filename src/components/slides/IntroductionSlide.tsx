@@ -1,5 +1,5 @@
 import React from 'react';
-import { SlideProps } from "../types";
+import { SlideProps } from "../../types";
 import { Brain, Cpu, BarChart } from 'lucide-react';
 
 const IntroductionSlide: React.FC<SlideProps> = ({ title }) => {
@@ -20,7 +20,7 @@ const IntroductionSlide: React.FC<SlideProps> = ({ title }) => {
           </div>
         ))}
         <blockquote className="border-l-4 border-blue-500 pl-4 mt-8 italic text-gray-700">
-          "Some people call this artificial intelligence, but the reality is this technology will enhance us. So instead of artificial intelligence, I think we'll augment our intelligence."
+          "Some people call this artificial intelligence, but the reality is this technology will enhance us."
           <footer className="text-sm mt-2 text-gray-600">– Ginni Rometty, Former CEO of IBM</footer>
         </blockquote>
       </div>
