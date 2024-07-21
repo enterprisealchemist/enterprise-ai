@@ -4,9 +4,9 @@ import { Brain, Cpu, BarChart } from 'lucide-react';
 
 const IntroductionSlide: React.FC<SlideProps> = ({ title }) => {
   const keyPoints = [
-    { icon: <Brain className="w-8 h-8 text-blue-500" />, text: "AI is reshaping the landscape of enterprise software" },
-    { icon: <Cpu className="w-8 h-8 text-green-500" />, text: "From automation to advanced analytics, AI is driving unprecedented change" },
-    { icon: <BarChart className="w-8 h-8 text-purple-500" />, text: "Today, we'll explore how AI is revolutionizing decision-making in enterprise systems" }
+    { icon: <Brain className="w-8 h-8 text-blue-500" />, text: "AI is reshaping the landscape of enterprise software." },
+    { icon: <Cpu className="w-8 h-8 text-green-500" />, text: "From automation to advanced analytics, AI is driving unprecedented change." },
+    { icon: <BarChart className="w-8 h-8 text-purple-500" />, text: "AI is revolutionizing decision-making in enterprise systems." }
   ];
 
   return (
@@ -20,8 +20,8 @@ const IntroductionSlide: React.FC<SlideProps> = ({ title }) => {
           </div>
         ))}
         <blockquote className="border-l-4 border-blue-500 pl-4 mt-8 italic text-gray-700">
-          "Some people call this artificial intelligence, but the reality is this technology will enhance us."
-          <footer className="text-sm mt-2 text-gray-600">– Ginni Rometty, Former CEO of IBM</footer>
+          "Artificial intelligence is not a substitute for human intelligence; it is a tool to amplify human creativity and ingenuity."
+          <footer className="text-sm mt-2 text-gray-600">– Fei-Fei Li, Co-Director of the Stanford Institute for Human-Centered Artificial Intelligence</footer>
         </blockquote>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { SlideProps } from "../../types";
 import { Beaker, ArrowRight, Brain, Lightbulb, Users, Sparkles } from 'lucide-react';
+import AlchemySymbolAnimation from '../AlchemySymbolAnimation';
 
 const AlchemicalApproachSlide: React.FC<SlideProps> = ({ title }) => {
   const alchemicalApproach = [
@@ -52,12 +53,15 @@ const AlchemicalApproachSlide: React.FC<SlideProps> = ({ title }) => {
           </div>
         ))}
       </div>
-      <div className="mt-6 flex justify-center items-center">
+      <div className="mt-3 flex justify-center items-center">
         <span className="text-lg font-medium">Human Potential</span>
         <ArrowRight className="w-8 h-8 mx-4 text-blue-500" />
         <span className="text-lg font-medium">AI as Catalyst</span>
         <ArrowRight className="w-8 h-8 mx-4 text-blue-500" />
         <span className="text-lg font-medium">Unlocked Capabilities</span>
+      </div>
+      <div className="mt-1 flex justify-center items-center" style={{ transform: 'scale(0.7)' }}>
+        <AlchemySymbolAnimation />
       </div>
     </div>
   );

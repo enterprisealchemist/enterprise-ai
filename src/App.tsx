@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import PresentationSkeleton from './components/slides/PresentationSkeleton';
+import PresentationSkeleton from './components/PresentationSkeleton';
 import IntroductionSlide from './components/slides/IntroductionSlide';
 import CurrentStateSlide from './components/slides/CurrentStateSlide';
 import KeyTechnologiesSlide from './components/slides/KeyTechnologiesSlide';
-import TransformativeImpactSlide from './components/slides/TransformativeImpactSlide';
+import TransformativeEraSlide from './components/slides/TransformativeEraSlide';
 import CaseStudySlide from './components/slides/CaseStudySlide';
 import AlchemicalApproachSlide from './components/slides/AlchemicalApproachSlide';
-import FutureTrendsSlide from './components/slides/FutureTrendsSlide';
+import EmergingTrendsSlide from './components/slides/EmergingTrendsSlide';
 import ConclusionSlide from './components/slides/ConclusionSlide';
 import QASlide from './components/slides/QASlide';
 
@@ -23,37 +23,37 @@ const App: React.FC = () => {
     { 
       component: CurrentStateSlide, 
       props: { 
-        title: "Current State of Enterprise Software" 
+        title: "Current State of Enterprise Data Ecosystems" 
       } 
     },
     { 
       component: KeyTechnologiesSlide, 
       props: { 
-        title: "Key Technologies"
+        title: "Key Technologies in AI"
       } 
     },
     { 
-      component: TransformativeImpactSlide, 
+      component: TransformativeEraSlide, 
       props: { 
-        title: "Transformative Impact"
+        title: "Transformative Times"
       } 
     },
     { 
       component: CaseStudySlide, 
       props: { 
-        title: "Case Study" 
+        title: "Case Study: Asset Management" 
       } 
     },
     { 
       component: AlchemicalApproachSlide, 
       props: { 
-        title: "Alchemical Approach"
+        title: "The Alchemy of AI"
       } 
     },
     { 
-      component: FutureTrendsSlide, 
+      component: EmergingTrendsSlide, 
       props: { 
-        title: "Future Trends"
+        title: "Emerging Trends in AI"
       } 
     },
     { 

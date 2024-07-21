@@ -38,7 +38,10 @@ const ConclusionSlide: React.FC<SlideProps> = ({ title }) => {
           </h3>
           <div className="bg-green-100 p-4 rounded-lg">
             <p className="text-sm text-gray-800">
-              This entire presentation, including its content, structure, and visual elements, was created with AI assistance in just a few hours! As someone who had never built a presentation like this before or deployed it to a webpage, I was able to leverage AI to rapidly develop and implement this project. This meta-example showcases how AI can empower individuals to quickly acquire new skills and produce high-quality work in unfamiliar domains, amplifying human creativity and productivity.
+              This entire presentation, including its content, structure, and visual elements, was created using multi-modal AI assistance.   
+              All of this was implemented in just one day with no prior experience whatsoever in developing interactive webpage presentations. 
+              This meta-example beautifully illustrates how AI tools can empower individuals to rapidly acquire new skills and produce high-quality 
+              content in previously unfamiliar domains.
             </p>
           </div>
         </div>
