@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/enterprise-ai/static/css/main.abc40d2d.css",
-    "main.js": "/enterprise-ai/static/js/main.978ed91b.js",
-    "static/js/453.65d684e1.chunk.js": "/enterprise-ai/static/js/453.65d684e1.chunk.js",
+    "main.css": "/enterprise-ai/static/css/main.a35c2a72.css",
+    "main.js": "/enterprise-ai/static/js/main.f5621588.js",
+    "static/js/453.b742e15e.chunk.js": "/enterprise-ai/static/js/453.b742e15e.chunk.js",
     "index.html": "/enterprise-ai/index.html",
-    "main.abc40d2d.css.map": "/enterprise-ai/static/css/main.abc40d2d.css.map",
-    "main.978ed91b.js.map": "/enterprise-ai/static/js/main.978ed91b.js.map",
-    "453.65d684e1.chunk.js.map": "/enterprise-ai/static/js/453.65d684e1.chunk.js.map"
+    "main.a35c2a72.css.map": "/enterprise-ai/static/css/main.a35c2a72.css.map",
+    "main.f5621588.js.map": "/enterprise-ai/static/js/main.f5621588.js.map",
+    "453.b742e15e.chunk.js.map": "/enterprise-ai/static/js/453.b742e15e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.abc40d2d.css",
-    "static/js/main.978ed91b.js"
+    "static/css/main.a35c2a72.css",
+    "static/js/main.f5621588.js"
   ]
 }
