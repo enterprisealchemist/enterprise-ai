@@ -13,10 +13,6 @@ const KeyTechnologiesSlide: React.FC<SlideProps> = ({ title }) => {
       exampleDescription: `Netflix uses machine learning to analyze viewing habits and provide personalized recommendations to its users. 
                     The system predicts which shows and movies a user might enjoy based on their previous viewing behavior, significantly 
                     enhancing user experience and engagement.`,
-      exampleLinks: [
-        {url: "https://builtin.com/artificial-intelligence/machine-learning-examples-applications", title: "BuiltIn"},
-        {url: "https://unicsoft.com/blog/applications-of-machine-learning/", title: "Unicsoft"}
-      ],
       icon: <Zap className="w-8 h-8 text-blue-500" />
     },
     {
@@ -27,7 +23,6 @@ const KeyTechnologiesSlide: React.FC<SlideProps> = ({ title }) => {
       exampleDescription: `Salesforce's Einstein AI technology helps businesses analyze customer interactions and derive insights. 
                     This helps in automating customer support with chatbots, which can understand and respond to customer queries 
                     efficiently, freeing up human agents for more complex issues`,
-      exampleLinks: [{url: "https://www.coursera.org/articles/machine-learning-applications", title: "Coursera"}],
       icon: <MessageSquare className="w-8 h-8 text-green-500" />
     },
     {
@@ -38,7 +33,6 @@ const KeyTechnologiesSlide: React.FC<SlideProps> = ({ title }) => {
       exampleDescription: `Uber uses predictive analytics to forecast demand and dynamically allocate drivers. By analyzing historical 
                     data and external factors like weather and local events, Uber can predict when and where there will be a high demand 
                     for rides, optimizing driver deployment and improving service efficiency.`,
-      exampleLinks: [{url: "https://pixelplex.io/blog/machine-learning-applications-in-business/", title: "Pixelplex"}],
       icon: <TrendingUp className="w-8 h-8 text-purple-500" />
     },
     {
@@ -51,7 +45,6 @@ const KeyTechnologiesSlide: React.FC<SlideProps> = ({ title }) => {
       exampleDescription: `Tesla incorporates computer vision in its self-driving cars to recognize and interpret visual information from the car's 
                     surroundings. This technology is crucial for tasks such as lane keeping, detecting obstacles, and recognizing traffic signals, 
                     enabling autonomous driving.`,
-      exampleLinks: [{url: "https://www.coursera.org/articles/machine-learning-applications", title: "Coursera"}],
       icon: <Eye className="w-8 h-8 text-red-500" />
     },
     {
@@ -62,7 +55,6 @@ const KeyTechnologiesSlide: React.FC<SlideProps> = ({ title }) => {
       exampleDescription: `Capital One utilizes RPA to automate various routine processes such as transaction monitoring and fraud detection. 
                     RPA bots handle repetitive tasks, which enhances operational efficiency and allows human employees to focus on more strategic 
                     activities.`,
-      exampleLinks: [{url: "https://unicsoft.com/blog/applications-of-machine-learning/", title: "Unicsoft"}],
       icon: <Bot className="w-8 h-8 text-orange-500" />
     }
   ];
@@ -92,26 +84,6 @@ const KeyTechnologiesSlide: React.FC<SlideProps> = ({ title }) => {
           <p className="text-sm text-gray-700">{technologies[activeIndex].description}</p>
           <h4 className="text-md font-semibold mt-4">Example: {technologies[activeIndex].example}</h4>
           <p className="text-sm text-gray-700">{technologies[activeIndex].exampleDescription}</p>
-          {technologies[activeIndex].exampleLinks && (
-            <div className="mt-4">
-              <h5 className="text-sm font-semibold">Learn More:</h5>
-              <ul className="text-sm">
-                {technologies[activeIndex].exampleLinks.map((link, index) => (
-                  <li key={index} className="mt-1">
-                    <a 
-                      href={link.url} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-blue-500 hover:underline flex items-center"
-                    >
-                      {link.title}
-                      <ExternalLink className="w-3 h-3 ml-1" />
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
         </div>
       </div>
     </div>

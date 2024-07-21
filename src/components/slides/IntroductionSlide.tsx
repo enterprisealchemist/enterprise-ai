@@ -1,12 +1,12 @@
 import React from 'react';
 import { SlideProps } from "../../types";
-import { Brain, Cpu, BarChart } from 'lucide-react';
+import { Database, Cpu, UserPen } from 'lucide-react';
 
 const IntroductionSlide: React.FC<SlideProps> = ({ title }) => {
   const keyPoints = [
-    { icon: <Brain className="w-8 h-8 text-blue-500" />, text: "AI is reshaping the landscape of enterprise software." },
-    { icon: <Cpu className="w-8 h-8 text-green-500" />, text: "From automation to advanced analytics, AI is driving unprecedented change." },
-    { icon: <BarChart className="w-8 h-8 text-purple-500" />, text: "AI is revolutionizing decision-making in enterprise systems." }
+    { icon: <Database className="w-8 h-8 text-blue-500" />, text: "AI is poised to reshape the landscape of enterprise data solutions." },
+    { icon: <Cpu className="w-8 h-8 text-green-500" />, text: "We are in a transformative time with emerging techonologies on the horizon." },
+    { icon: <UserPen className="w-8 h-8 text-purple-500" />, text: "AI has massive potential as a tool for supercharging human productivity." }
   ];
 
   return (

@@ -25,18 +25,18 @@ const PresentationSkeleton: React.FC<PresentationSkeletonProps> = ({ slides, cur
   const CurrentSlide = slides[currentSlide].component;
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100 p-4">
-      <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-4xl h-full flex flex-col">
-        <h1 className="text-2xl md:text-3xl font-bold mb-4">The Role of AI in Enhancing Enterprise Data Solutions</h1>
+    <div className="flex flex-col items-center justify-center h-screen bg-pearl p-4">
+      <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-6xl aspect-video flex flex-col">
+        <h1 className="text-2xl md:text-3xl font-bold mb-4 text-space-cadet">The Role of AI in Enhancing Enterprise Data Solutions</h1>
         <div className="flex-grow overflow-auto mb-4">
           <CurrentSlide {...slides[currentSlide].props} />
         </div>
         <div className="flex justify-between items-center mt-auto">
-          <button onClick={prevSlide} className="bg-blue-500 text-white p-2 rounded-full">
+          <button onClick={prevSlide} className="bg-dark-purple text-pearl p-2 rounded-full hover:bg-paynes-gray transition-colors">
             <ChevronLeft size={24} />
           </button>
-          <span className="text-lg">{currentSlide + 1} / {slides.length}</span>
-          <button onClick={nextSlide} className="bg-blue-500 text-white p-2 rounded-full">
+          <span className="text-lg text-space-cadet">{currentSlide + 1} / {slides.length}</span>
+          <button onClick={nextSlide} className="bg-dark-purple text-pearl p-2 rounded-full hover:bg-paynes-gray transition-colors">
             <ChevronRight size={24} />
           </button>
         </div>

@@ -39,6 +39,7 @@ const TransformativeEraSlide: React.FC<SlideProps> = ({ title }) => {
       <h2 className="text-2xl font-semibold mb-2">{title}</h2>
       <div className="flex-grow flex">
         <div className="w-1/2 pr-4">
+        <h3 className="text-md font-semibold mb-2">Organizations that have adopted AI in at least 1 business function (%)</h3>
           <ResponsiveContainer width="100%" height={300}>
             <LineChart data={aiAdoptionData}>
               <CartesianGrid strokeDasharray="3 3" />
@@ -50,6 +51,7 @@ const TransformativeEraSlide: React.FC<SlideProps> = ({ title }) => {
               <Line type="monotone" dataKey="generativeAI" stroke="#82ca9d" name="Generative AI" />
             </LineChart>
           </ResponsiveContainer>
+
           <div className="text-xs text-gray-500 mt-2 flex items-center">
             <span>Source: </span>
             <a 

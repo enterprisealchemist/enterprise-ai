@@ -23,13 +23,7 @@ const App: React.FC = () => {
     { 
       component: CurrentStateSlide, 
       props: { 
-        title: "Current State of Enterprise Data Ecosystems" 
-      } 
-    },
-    { 
-      component: KeyTechnologiesSlide, 
-      props: { 
-        title: "Key Technologies in AI"
+        title: "Enterprise Data Ecosystems" 
       } 
     },
     { 
@@ -39,21 +33,27 @@ const App: React.FC = () => {
       } 
     },
     { 
+      component: KeyTechnologiesSlide, 
+      props: { 
+        title: "Key Technologies in AI"
+      } 
+    },
+    { 
       component: CaseStudySlide, 
       props: { 
         title: "Case Study: Asset Management" 
       } 
     },
     { 
-      component: AlchemicalApproachSlide, 
+      component: EmergingTrendsSlide, 
       props: { 
-        title: "The Alchemy of AI"
+        title: "Emerging Technologies"
       } 
     },
     { 
-      component: EmergingTrendsSlide, 
+      component: AlchemicalApproachSlide, 
       props: { 
-        title: "Emerging Trends in AI"
+        title: "Enterprise Alchemy"
       } 
     },
     { 
