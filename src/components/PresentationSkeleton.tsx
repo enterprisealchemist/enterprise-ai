@@ -27,7 +27,7 @@ const PresentationSkeleton: React.FC<PresentationSkeletonProps> = ({ slides, cur
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-pearl p-4">
       <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-6xl aspect-video flex flex-col">
-        <h1 className="text-2xl md:text-3xl font-bold mb-4 text-space-cadet">The Role of AI in Enhancing Enterprise Data Solutions</h1>
+        <h1 className="text-2xl md:text-3xl font-bold mb-4 text-space-cadet">Artificial Intelligence: Beyond an Upgrade</h1>
         <div className="flex-grow overflow-auto mb-4">
           <CurrentSlide {...slides[currentSlide].props} />
         </div>

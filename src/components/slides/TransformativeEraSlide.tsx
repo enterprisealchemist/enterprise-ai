@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { SlideProps } from "../../types";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { AlertCircle, ExternalLink } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const TransformativeEraSlide: React.FC<SlideProps> = ({ title }) => {
+  const [step, setStep] = useState(0);
+
   const aiAdoptionData = [
     { year: 2017, adoption: 20, generativeAI: null },
     { year: 2018, adoption: 47, generativeAI: null },
@@ -16,65 +19,112 @@ const TransformativeEraSlide: React.FC<SlideProps> = ({ title }) => {
   ];
 
   const impacts = [
-    {
-      title: "Rapid AI Adoption",
-      description: "Organizations are increasingly adopting AI, with a significant spike in recent years."
-    },
-    {
-      title: "Generative AI Growth",
-      description: "Generative AI has seen explosive growth, nearly doubling in adoption from 2023 to 2024."
-    },
-    {
-      title: "Widespread Integration",
-      description: "By 2024, 72% of organizations have adopted AI in at least one business function."
-    },
-    {
-      title: "Transformative Potential",
-      description: "The rapid adoption indicates AI's transformative impact across various industries."
-    }
+    { title: "Rapid AI Adoption" },
+    { title: "Generative AI Growth" },
+    { title: "Widespread Integration" },
+    { title: "Transformative Potential" }
   ];
 
+  const nextStep = () => setStep(prev => Math.min(prev + 1, 8));
+
   return (
-    <div className="slide h-full flex flex-col">
-      <h2 className="text-2xl font-semibold mb-2">{title}</h2>
+    <div className="slide h-full flex flex-col overflow-hidden" onClick={nextStep}>
+      <AnimatePresence>
+        {step >= 0 && (
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="text-2xl font-semibold mb-2"
+          >
+            {title}
+          </motion.h2>
+        )}
+      </AnimatePresence>
       <div className="flex-grow flex">
         <div className="w-1/2 pr-4">
-        <h3 className="text-md font-semibold mb-2">Organizations that have adopted AI in at least 1 business function (%)</h3>
-          <ResponsiveContainer width="100%" height={300}>
-            <LineChart data={aiAdoptionData}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="year" />
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Line type="monotone" dataKey="adoption" stroke="#8884d8" name="AI Adoption" />
-              <Line type="monotone" dataKey="generativeAI" stroke="#82ca9d" name="Generative AI" />
-            </LineChart>
-          </ResponsiveContainer>
-
-          <div className="text-xs text-gray-500 mt-2 flex items-center">
-            <span>Source: </span>
-            <a 
-              href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-blue-500 hover:underline flex items-center ml-1"
-            >
-              McKinsey & Company
-              <ExternalLink className="w-3 h-3 ml-1" />
-            </a>
-          </div>
+          <AnimatePresence>
+            {step >= 1 && (
+              <motion.h3
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                className="text-md font-semibold mb-2"
+              >
+                Organizations that have adopted AI in at least 1 business function (%)
+              </motion.h3>
+            )}
+          </AnimatePresence>
+          <AnimatePresence>
+            {step >= 2 && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+              >
+                <ResponsiveContainer width="100%" height={300}>
+                  <LineChart data={aiAdoptionData}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="year" />
+                    <YAxis />
+                    <Tooltip />
+                    <Legend />
+                    <Line type="monotone" dataKey="adoption" stroke="#8884d8" name="AI Adoption" />
+                    <Line type="monotone" dataKey="generativeAI" stroke="#82ca9d" name="Generative AI" />
+                  </LineChart>
+                </ResponsiveContainer>
+              </motion.div>
+            )}
+          </AnimatePresence>
+          <AnimatePresence>
+            {step >= 3 && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                className="text-xs text-gray-500 mt-2 flex items-center"
+              >
+                <span>Source: </span>
+                <a 
+                  href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-500 hover:underline flex items-center ml-1"
+                >
+                  McKinsey & Company
+                  <ExternalLink className="w-3 h-3 ml-1" />
+                </a>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
         <div className="w-1/2 pl-4">
-          <h3 className="text-xl font-semibold mb-4">Key Impacts</h3>
+          <AnimatePresence>
+            {step >= 4 && (
+              <motion.h3
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                className="text-xl font-semibold mb-4"
+              >
+                Key Impacts
+              </motion.h3>
+            )}
+          </AnimatePresence>
           {impacts.map((impact, index) => (
-            <div key={index} className="mb-4 flex items-start">
-              <AlertCircle className="w-5 h-5 text-blue-500 mr-2 mt-1" />
-              <div>
-                <h4 className="font-medium">{impact.title}</h4>
-                <p className="text-sm text-gray-600">{impact.description}</p>
-              </div>
-            </div>
+            <AnimatePresence key={index}>
+              {step >= index + 5 && (
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 20 }}
+                  className="mb-4 flex items-start"
+                >
+                  <AlertCircle className="w-5 h-5 text-blue-500 mr-2 mt-1" />
+                  <h4 className="font-medium">{impact.title}</h4>
+                </motion.div>
+              )}
+            </AnimatePresence>
           ))}
         </div>
       </div>
