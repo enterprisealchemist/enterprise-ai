@@ -1,15 +1,23 @@
 {
   "files": {
-    "main.css": "/enterprise-ai/static/css/main.6276f150.css",
-    "main.js": "/enterprise-ai/static/js/main.28b6c858.js",
+    "main.css": "/enterprise-ai/static/css/main.248b46f1.css",
+    "main.js": "/enterprise-ai/static/js/main.9d74a1e4.js",
     "static/js/453.b742e15e.chunk.js": "/enterprise-ai/static/js/453.b742e15e.chunk.js",
+    "static/media/computer_vision.jpg": "/enterprise-ai/static/media/computer_vision.523f88d005cdc5892bc4.jpg",
+    "static/media/machine_learning.jpg": "/enterprise-ai/static/media/machine_learning.cf2110bdaf769a05a769.jpg",
+    "static/media/process_automation.jpg": "/enterprise-ai/static/media/process_automation.2028a8a5a45f40c78b6e.jpg",
+    "static/media/predictive_analytics.jpg": "/enterprise-ai/static/media/predictive_analytics.365c303c2cb3d43d6b23.jpg",
+    "static/media/explainable_ai.jpg": "/enterprise-ai/static/media/explainable_ai.b093bf7a425208c6012c.jpg",
+    "static/media/natural_language.jpg": "/enterprise-ai/static/media/natural_language.4631b4f9d2fff7f5a884.jpg",
+    "static/media/quantum_ai.jpg": "/enterprise-ai/static/media/quantum_ai.c8475415fd784952a836.jpg",
+    "static/media/edge_ai.jpg": "/enterprise-ai/static/media/edge_ai.7e560e0d75d96ef63ce8.jpg",
     "index.html": "/enterprise-ai/index.html",
-    "main.6276f150.css.map": "/enterprise-ai/static/css/main.6276f150.css.map",
-    "main.28b6c858.js.map": "/enterprise-ai/static/js/main.28b6c858.js.map",
+    "main.248b46f1.css.map": "/enterprise-ai/static/css/main.248b46f1.css.map",
+    "main.9d74a1e4.js.map": "/enterprise-ai/static/js/main.9d74a1e4.js.map",
     "453.b742e15e.chunk.js.map": "/enterprise-ai/static/js/453.b742e15e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6276f150.css",
-    "static/js/main.28b6c858.js"
+    "static/css/main.248b46f1.css",
+    "static/js/main.9d74a1e4.js"
   ]
 }
