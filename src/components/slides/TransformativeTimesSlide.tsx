@@ -4,7 +4,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 import { AlertCircle, ExternalLink } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const TransformativeEraSlide: React.FC<SlideProps> = ({ title }) => {
+const TransformativeTimesSlide: React.FC<SlideProps> = ({ title }) => {
   const [step, setStep] = useState(0);
 
   const aiAdoptionData = [
@@ -25,7 +25,7 @@ const TransformativeEraSlide: React.FC<SlideProps> = ({ title }) => {
     { title: "Transformative Potential" }
   ];
 
-  const nextStep = () => setStep(prev => Math.min(prev + 1, 8));
+  const nextStep = () => setStep(prev => Math.min(prev + 1, 7));
 
   return (
     <div className="slide h-full flex flex-col overflow-hidden" onClick={nextStep}>
@@ -41,10 +41,10 @@ const TransformativeEraSlide: React.FC<SlideProps> = ({ title }) => {
           </motion.h2>
         )}
       </AnimatePresence>
-      <div className="flex-grow flex">
-        <div className="w-1/2 pr-4">
+      <div className="flex-grow flex overflow-hidden">
+        <div className="w-1/2 pr-4 overflow-hidden">
           <AnimatePresence>
-            {step >= 1 && (
+            {step >= 0 && (
               <motion.h3
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -56,11 +56,12 @@ const TransformativeEraSlide: React.FC<SlideProps> = ({ title }) => {
             )}
           </AnimatePresence>
           <AnimatePresence>
-            {step >= 2 && (
+            {step >= 0 && (
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
+                className="overflow-hidden"
               >
                 <ResponsiveContainer width="100%" height={300}>
                   <LineChart data={aiAdoptionData}>
@@ -77,12 +78,12 @@ const TransformativeEraSlide: React.FC<SlideProps> = ({ title }) => {
             )}
           </AnimatePresence>
           <AnimatePresence>
-            {step >= 3 && (
+            {step >= 0 && (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                className="text-xs text-gray-500 mt-2 flex items-center"
+                className="text-xs text-gray-500 mt-2 flex items-center overflow-hidden"
               >
                 <span>Source: </span>
                 <a 
@@ -98,9 +99,9 @@ const TransformativeEraSlide: React.FC<SlideProps> = ({ title }) => {
             )}
           </AnimatePresence>
         </div>
-        <div className="w-1/2 pl-4">
+        <div className="w-1/2 pl-4 overflow-hidden">
           <AnimatePresence>
-            {step >= 4 && (
+            {step >= 1 && (
               <motion.h3
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -113,12 +114,12 @@ const TransformativeEraSlide: React.FC<SlideProps> = ({ title }) => {
           </AnimatePresence>
           {impacts.map((impact, index) => (
             <AnimatePresence key={index}>
-              {step >= index + 5 && (
+              {step >= index + 1 && (
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 20 }}
-                  className="mb-4 flex items-start"
+                  className="mb-4 flex items-start overflow-hidden"
                 >
                   <AlertCircle className="w-5 h-5 text-blue-500 mr-2 mt-1" />
                   <h4 className="font-medium">{impact.title}</h4>
@@ -132,4 +133,4 @@ const TransformativeEraSlide: React.FC<SlideProps> = ({ title }) => {
   );
 };
 
-export default TransformativeEraSlide;
+export default TransformativeTimesSlide;

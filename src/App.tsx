@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import PresentationSkeleton from './components/PresentationSkeleton';
 import IntroductionSlide from './components/slides/IntroductionSlide';
 import CurrentStateSlide from './components/slides/CurrentStateSlide';
-import KeyTechnologiesSlide from './components/slides/KeyTechnologiesSlide';
-import TransformativeEraSlide from './components/slides/TransformativeEraSlide';
+import KeyPatternsSlide from './components/slides/KeyPatternsSlide';
+import TransformativeTimesSlide from './components/slides/TransformativeTimesSlide';
 import CaseStudySlide from './components/slides/CaseStudySlide';
-import AlchemicalApproachSlide from './components/slides/AlchemicalApproachSlide';
-import EmergingTrendsSlide from './components/slides/EmergingTrendsSlide';
+import AlchemyAnalogySlide from './components/slides/AlchemyAnalogySlide';
+import EmergingTechSlide from './components/slides/EmergingTechSlide';
 import ConclusionSlide from './components/slides/ConclusionSlide';
-import QASlide from './components/slides/QASlide';
+import DiscussionSlide from './components/slides/DiscussionSlide';
 
 const App: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
@@ -23,19 +23,19 @@ const App: React.FC = () => {
     { 
       component: CurrentStateSlide, 
       props: { 
-        title: "Enterprise Data Ecosystems" 
+        title: "Data Ecosystems" 
       } 
     },
     { 
-      component: TransformativeEraSlide, 
+      component: TransformativeTimesSlide, 
       props: { 
         title: "Transformative Times"
       } 
     },
     { 
-      component: KeyTechnologiesSlide, 
+      component: KeyPatternsSlide, 
       props: { 
-        title: "Key Technologies in AI"
+        title: "Key Patterns"
       } 
     },
     { 
@@ -45,15 +45,15 @@ const App: React.FC = () => {
       } 
     },
     { 
-      component: EmergingTrendsSlide, 
+      component: EmergingTechSlide, 
       props: { 
         title: "Emerging Technologies"
       } 
     },
     { 
-      component: AlchemicalApproachSlide, 
+      component: AlchemyAnalogySlide, 
       props: { 
-        title: "Enterprise Alchemy"
+        title: "The Alchemy Analogy"
       } 
     },
     { 
@@ -63,9 +63,9 @@ const App: React.FC = () => {
       } 
     },
     { 
-      component: QASlide, 
+      component: DiscussionSlide, 
       props: { 
-        title: "Q&A"
+        title: "Discussion"
       } 
     }
   ];
