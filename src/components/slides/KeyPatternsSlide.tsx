@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { SlideProps } from "../../types";
 import { Zap, MessageSquare, TrendingUp, Eye, Bot } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import OptimizedImage from '../OptimizedImage';
 
 // Import images directly
 import machineLearningImg from '../../images/keytechnologies/machine_learning.jpg';
@@ -13,6 +14,7 @@ import rpaImg from '../../images/keytechnologies/process_automation.jpg';
 const KeyPatternsSlide: React.FC<SlideProps> = ({ title }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [step, setStep] = useState(0);
+  const [nextIndex, setNextIndex] = useState(1);
 
   const patterns = [
     {
@@ -47,12 +49,14 @@ const KeyPatternsSlide: React.FC<SlideProps> = ({ title }) => {
   useEffect(() => {
     if (step > 0) {
       setActiveIndex(step - 1);
+      setNextIndex(step % patterns.length);
     }
   }, [step]);
 
   const handleTechnologyClick = (index: number) => {
     if (index < step) {
       setActiveIndex(index);
+      setNextIndex((index + 1) % patterns.length);
     }
   };
 
@@ -107,10 +111,16 @@ const KeyPatternsSlide: React.FC<SlideProps> = ({ title }) => {
                 transition={{ duration: 0.3 }}
                 className="w-full aspect-square relative"
               >
-                <img 
+                <OptimizedImage 
                   src={patterns[activeIndex].image}
                   alt={patterns[activeIndex].name}
                   className="absolute inset-0 w-full h-full object-cover rounded"
+                />
+                {/* Preload next image */}
+                <OptimizedImage 
+                  src={patterns[nextIndex].image}
+                  alt={patterns[nextIndex].name}
+                  className="hidden"
                 />
               </motion.div>
             )}

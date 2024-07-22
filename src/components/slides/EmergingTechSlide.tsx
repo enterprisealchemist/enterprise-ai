@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { SlideProps } from "../../types";
 import { Atom, Search, Cpu, ExternalLink } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import OptimizedImage from '../OptimizedImage';
 
 // Import images
 import quantumAIImg from '../../images/emergingtech/quantum_ai.jpg';
@@ -23,8 +24,8 @@ type TrendsData = {
 
 const EmergingTechSlide: React.FC<SlideProps> = ({ title }) => {
   const [activeCategory, setActiveCategory] = useState<TrendCategory>('quantum');
+  const [nextCategory, setNextCategory] = useState<TrendCategory>('explainable');
   const [step, setStep] = useState(0);
-
 
   const trends: TrendsData = {
     quantum: {
@@ -69,6 +70,13 @@ const EmergingTechSlide: React.FC<SlideProps> = ({ title }) => {
   };
 
   const nextStep = () => setStep(prev => Math.min(prev + 1, Object.keys(trends).length));
+
+  useEffect(() => {
+    const categories = Object.keys(trends) as TrendCategory[];
+    const currentIndex = categories.indexOf(activeCategory);
+    const nextIndex = (currentIndex + 1) % categories.length;
+    setNextCategory(categories[nextIndex]);
+  }, [activeCategory]);
 
   return (
     <div className="slide h-full flex flex-col overflow-hidden" onClick={nextStep}>
@@ -118,10 +126,16 @@ const EmergingTechSlide: React.FC<SlideProps> = ({ title }) => {
                 className="bg-white p-6 rounded-lg h-full flex flex-col overflow-hidden"
               >
                 <div className="flex-grow relative overflow-hidden">
-                  <img 
-                    src={trends[activeCategory].image} 
+                  <OptimizedImage 
+                    src={trends[activeCategory].image}
                     alt={trends[activeCategory].title}
                     className="absolute inset-0 w-full h-full object-cover rounded"
+                  />
+                  {/* Preload next image */}
+                  <OptimizedImage 
+                    src={trends[nextCategory].image}
+                    alt={trends[nextCategory].title}
+                    className="hidden"
                   />
                 </div>
                 <div className="mt-4 overflow-hidden">
