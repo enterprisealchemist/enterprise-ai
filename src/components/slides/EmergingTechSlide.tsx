@@ -117,7 +117,6 @@ const EmergingTechSlide: React.FC<SlideProps> = ({ title }) => {
                 transition={{ duration: 0.3 }}
                 className="bg-white p-6 rounded-lg h-full flex flex-col overflow-hidden"
               >
-                <h3 className="text-xl font-semibold mb-4">{trends[activeCategory].title}</h3>
                 <div className="flex-grow relative overflow-hidden">
                   <img 
                     src={trends[activeCategory].image} 
