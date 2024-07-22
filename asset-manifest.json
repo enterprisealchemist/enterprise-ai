@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/enterprise-ai/static/css/main.7dd7d4e4.css",
-    "main.js": "/enterprise-ai/static/js/main.d2c87819.js",
+    "main.css": "/enterprise-ai/static/css/main.032acbde.css",
+    "main.js": "/enterprise-ai/static/js/main.12b23d35.js",
     "static/js/453.b742e15e.chunk.js": "/enterprise-ai/static/js/453.b742e15e.chunk.js",
     "index.html": "/enterprise-ai/index.html",
-    "main.7dd7d4e4.css.map": "/enterprise-ai/static/css/main.7dd7d4e4.css.map",
-    "main.d2c87819.js.map": "/enterprise-ai/static/js/main.d2c87819.js.map",
+    "main.032acbde.css.map": "/enterprise-ai/static/css/main.032acbde.css.map",
+    "main.12b23d35.js.map": "/enterprise-ai/static/js/main.12b23d35.js.map",
     "453.b742e15e.chunk.js.map": "/enterprise-ai/static/js/453.b742e15e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7dd7d4e4.css",
-    "static/js/main.d2c87819.js"
+    "static/css/main.032acbde.css",
+    "static/js/main.12b23d35.js"
   ]
 }
