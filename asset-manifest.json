@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/enterprise-ai/static/css/main.ab7639f8.css",
-    "main.js": "/enterprise-ai/static/js/main.d9f3a4ad.js",
+    "main.css": "/enterprise-ai/static/css/main.bb143abb.css",
+    "main.js": "/enterprise-ai/static/js/main.3b6b5554.js",
     "static/js/453.b742e15e.chunk.js": "/enterprise-ai/static/js/453.b742e15e.chunk.js",
     "static/media/computer_vision.jpg": "/enterprise-ai/static/media/computer_vision.523f88d005cdc5892bc4.jpg",
     "static/media/machine_learning.jpg": "/enterprise-ai/static/media/machine_learning.cf2110bdaf769a05a769.jpg",
@@ -12,12 +12,12 @@
     "static/media/quantum_ai.jpg": "/enterprise-ai/static/media/quantum_ai.c8475415fd784952a836.jpg",
     "static/media/edge_ai.jpg": "/enterprise-ai/static/media/edge_ai.7e560e0d75d96ef63ce8.jpg",
     "index.html": "/enterprise-ai/index.html",
-    "main.ab7639f8.css.map": "/enterprise-ai/static/css/main.ab7639f8.css.map",
-    "main.d9f3a4ad.js.map": "/enterprise-ai/static/js/main.d9f3a4ad.js.map",
+    "main.bb143abb.css.map": "/enterprise-ai/static/css/main.bb143abb.css.map",
+    "main.3b6b5554.js.map": "/enterprise-ai/static/js/main.3b6b5554.js.map",
     "453.b742e15e.chunk.js.map": "/enterprise-ai/static/js/453.b742e15e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ab7639f8.css",
-    "static/js/main.d9f3a4ad.js"
+    "static/css/main.bb143abb.css",
+    "static/js/main.3b6b5554.js"
   ]
 }
