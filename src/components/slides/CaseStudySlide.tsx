@@ -30,7 +30,18 @@ const CaseStudySlide: React.FC<SlideProps> = ({ title }) => {
         <p className="mb-2"><strong>Challenge:</strong> {caseStudy.challenge}</p>
         <p className="mb-2"><strong>Solution:</strong> {caseStudy.solution}</p>        
         <div className="mt-4">
-          <h4 className="text-lg font-semibold mb-2">Key Results:</h4>
+          <AnimatePresence>
+            {step > 0 && (
+              <motion.h4
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                className="text-lg font-semibold mb-2"
+              >
+                Key Results:
+              </motion.h4>
+            )}
+          </AnimatePresence>
           <div className="grid grid-cols-3 gap-4">
             {caseStudy.keyResults.map((result, index) => (
               <AnimatePresence key={index}>
@@ -54,7 +65,7 @@ const CaseStudySlide: React.FC<SlideProps> = ({ title }) => {
         </div>
 
         <AnimatePresence>
-          {step > caseStudy.keyResults.length && (
+          {step >= caseStudy.keyResults.length && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

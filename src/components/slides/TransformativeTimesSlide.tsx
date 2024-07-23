@@ -21,8 +21,7 @@ const TransformativeTimesSlide: React.FC<SlideProps> = ({ title }) => {
   const impacts = [
     { title: "Rapid AI Adoption" },
     { title: "Generative AI Growth" },
-    { title: "Widespread Integration" },
-    { title: "Transformative Potential" }
+    { title: "Widespread Integration" }
   ];
 
   const nextStep = () => setStep(prev => Math.min(prev + 1, 7));
@@ -108,7 +107,7 @@ const TransformativeTimesSlide: React.FC<SlideProps> = ({ title }) => {
                 exit={{ opacity: 0, y: -20 }}
                 className="text-xl font-semibold mb-4"
               >
-                Key Impacts
+                Observations
               </motion.h3>
             )}
           </AnimatePresence>
