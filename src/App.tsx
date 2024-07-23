@@ -53,7 +53,7 @@ const App: React.FC = () => {
     { 
       component: AlchemyAnalogySlide, 
       props: { 
-        title: "The Alchemy Analogy"
+        title: "Alchemical Transformation"
       } 
     },
     { 
