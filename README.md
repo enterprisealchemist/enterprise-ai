@@ -1,6 +1,24 @@
-﻿# Current State Slide: Speaking Notes
+﻿# Artificial Intelligence: Beyond an Upgrade
 
-## Traditional Data Ecosystem Challenges
+- Welcome the audience and introduce the topic of AI in enterprise software
+- Briefly outline the importance and relevance of AI in today's business landscape
+- Preview the key areas the presentation will cover:
+  1. Current state of data ecosystems
+  2. Trends in AI adoption
+  3. Key AI patterns in industry
+  4. Case study in asset management
+  5. Emerging technologies in AI
+  6. A somewhat esoteric analogy
+
+### Activate Blockquote
+- Set the tone: "This presentation aims to explore how AI is more than an upgrade, as it's potential to amplify human skillsets will make it a transformative force in enterprise software."
+
+### From Introduction to Current State:
+   "Now that we've set the stage, let's dive into the current state of data ecosystems and the challenges they face."
+   
+# Data Ecosystems
+
+## Traditional Challenges
 
 1. Large-scale, complex ecosystems
    - Enterprise data ecosystems are often vast and intricate
@@ -10,26 +28,33 @@
    - Traditional systems often struggle with data silos
    - Hinders the ability to aggregate and analyze information across the entire ecosystem
 
-## Machine Learning-Powered Solutions
+## Machine Learning
 
 1. Supercharged data aggregation
-   - Machine Learning enables more effective information aggregation
-   - Breaks down data silos
-   - Creates a unified view of the enterprise ecosystem
+   - The true power of machine learning is in its capability to aggregate data
+   - Harmonize data silos and creates a unified view of the enterprise ecosystem
 
 2. Rapid, meaningful insights
    - ML-powered analytics extract meaningful details much faster
    - Enables faster and more informed decision-making
    - Significant improvement in analysis time compared to traditional methods
 
-# Transformative Era Slide: Speaking Notes
+### From Current State to Transformative Era:
+   "With these challenges in mind, let's explore how we're entering a transformative era for AI in enterprise software."
+
+# Transformative Times
 
 ## AI Adoption Chart
 - The chart shows the percentage of organizations that have adopted AI in at least one business function.
 - Note the significant increase in AI adoption from 2017 to 2024.
 - Generative AI data starts from 2023, showing rapid growth in just one year.
 
-## Key Impacts
+## Source
+- The data is from McKinsey & Company, a reputable global management consulting firm.
+- Their report "The State of AI" provides comprehensive insights into AI adoption trends.
+- "Since 2004, McKinsey Global Publishing’s survey team has polled our panel of thousands of executives and managers to generate new and distinctive insights on today’s critical business topics."
+
+## Observations
 
 1. Rapid AI Adoption
    - Organizations are increasingly adopting AI, with a significant spike in recent years.
@@ -47,11 +72,10 @@
    - The rapid adoption indicates AI's transformative impact across various industries.
    - This trend suggests that AI is not just an optional upgrade, but a necessary tool for staying competitive in the modern business landscape.
 
-## Source
-- The data is from McKinsey & Company, a reputable global management consulting firm.
-- Their report "The State of AI" provides comprehensive insights into AI adoption trends.
+### From Transformative Era to Key Technologies:
+   "To understand this transformation, it's crucial to familiarize ourselves with the key AI technologies driving this change."
 
-# Key Technologies in AI - Speaking Notes
+# Key Patterns
 
 ## Machine Learning
 - Enables systems to learn from data without explicit programming
@@ -101,13 +125,16 @@
   - Enhances operational efficiency
   - Allows employees to focus on strategic activities
 
-# Case Study: Baker Hughes - AI in Asset Management
+### From Key Technologies to Case Study:
+   "Now that we've covered the key technologies, let's see how they're being applied in Asset Management with a case study from Baker Hughes."
+
+# Case Study: Asset Management
 
 ## Introduction
 - Company: Baker Hughes
 - Industry: Oil and Gas, Industrial Services
 
-## Challenge
+## Problem
 - Large hydrocarbon producer facing issues with industrial asset management (IAM)
 - Need for optimizing maintenance and reducing downtime
 
@@ -139,7 +166,10 @@
 - Case study available on Baker Hughes website
 - Provides more detailed information on the implementation and results
 
-# Emerging Trends in AI
+### From Case Study to Emerging Trends:
+   "While this case study shows current applications, the field of AI is rapidly evolving. Let's look at some emerging trends that are shaping the future of AI in enterprise software."
+
+# Emerging Technologies
 
 ## Introduction
 - AI is rapidly evolving, with new technologies emerging that promise to revolutionize various industries.
@@ -176,7 +206,38 @@
 - Explainable AI: Springer article
 - Edge AI: Wevolver 2023 Edge AI Technology Report
 
-# Alchemical Analogy
+### From Emerging Trends to Alchemical Analogy:
+   "As we consider these emerging technologies, it's helpful to think about AI's transformative power through the lens of an interesting and esoteric analogy: alchemy."
+
+# Risks and Challenges in Enterprise AI
+
+## 1. Data Integrity & Model Accuracy
+- Ensuring the quality and consistency of data is crucial
+- Poor data quality leads to inaccurate AI models and flawed decision-making
+- Regular audits and robust data governance practices are essential
+- Continuous validation and testing required to ensure model accuracy
+
+## 2. Bias & Discrimination
+- AI systems can perpetuate or amplify existing biases
+- Biased AI can lead to unfair outcomes and discrimination
+- Mitigation strategies:
+  - Use diverse and representative datasets
+  - Implement fairness constraints during training
+  - Conduct regular bias audits
+
+## 3. Cybersecurity Risks
+- AI can be exploited for malicious purposes (e.g., deepfakes, sophisticated cyber attacks)
+- AI systems themselves can be vulnerable to attacks (e.g., adversarial attacks)
+- Advanced cybersecurity strategies and regular security assessments are crucial
+
+## Conclusion
+- Addressing these risks and challenges requires:
+  - Comprehensive risk management strategies
+  - Ethical practices
+  - Continuous monitoring and adaptation
+- Despite challenges, the potential benefits of AI in enterprise software are significant
+
+# Alchemical Transformation
 
 ## Introduction
 - The concept of alchemy provides a powerful metaphor for understanding the transformative potential of AI in enterprise software.
@@ -190,20 +251,25 @@
 ## Characteristics Enhanced by AI
 
 1. Intelligence
-   - More than ever, we have the broad wealth of knowledge at our fingertips.
+   - More than ever, we have the broad wealth of human knowledge at our fingertips.
 
 2. Creativity
    - AI handles mundane tasks, allowing users to focus on ideation and invention.
+   - It can also assist with brainstorming and developing concept art
 
 3. Collaboration
    - Streamlines communications by transcribing and summarizing.
 
 4. Learning
    - Lessens barrier of entry by generating customized learning paths for inquisitive users.
+
 ## Conclusion
 - AI in enterprise software is not about replacing humans, but about unlocking their latent potential.
 - The alchemical approach emphasizes transformation and enhancement rather than substitution.
 - By embracing this perspective, organizations can fully leverage the power of AI to drive innovation and growth.
+
+### From Alchemical Analogy to Conclusion:
+   "With this alchemical perspective in mind, let's synthesize what we've learned and consider the broader implications of AI in enterprise software."
 
 # Conclusion: AI in Enterprise Software
 
