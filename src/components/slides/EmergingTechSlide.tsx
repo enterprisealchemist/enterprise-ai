@@ -29,7 +29,7 @@ const EmergingTechSlide: React.FC<SlideProps> = ({ title }) => {
 
   const trends: TrendsData = {
     quantum: {
-      icon: <Atom className="w-12 h-12 text-purple-500" />,
+      icon: <Atom className="w-12 h-12 text-celestial-blue" />,
       title: "Quantum AI",
       image: quantumAIImg,
       links: [
@@ -42,7 +42,7 @@ const EmergingTechSlide: React.FC<SlideProps> = ({ title }) => {
       ]
     },
     explainable: {
-      icon: <Search className="w-12 h-12 text-green-500" />,
+      icon: <Search className="w-12 h-12 text-red-violet" />,
       title: "Explainable AI (XAI)",
       image: explainableAIImg,
       links: [
@@ -55,7 +55,7 @@ const EmergingTechSlide: React.FC<SlideProps> = ({ title }) => {
       ]
     },
     edge: {
-      icon: <Cpu className="w-12 h-12 text-blue-500" />,
+      icon: <Cpu className="w-12 h-12 text-yellow-green" />,
       title: "Edge AI",
       image: edgeAIImg,
       links: [
@@ -102,7 +102,7 @@ const EmergingTechSlide: React.FC<SlideProps> = ({ title }) => {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 20 }}
                   className={`cursor-pointer p-4 rounded-lg mb-4 flex items-center ${
-                    activeCategory === key ? 'bg-blue-100' : 'bg-gray-100 hover:bg-gray-200'
+                    activeCategory === key ? 'bg-gray-200' : 'bg-white-cream hover:bg-gray-200'
                   }`}
                   onClick={() => setActiveCategory(key)}
                   onAnimationComplete={() => step >= index && setActiveCategory(key)}
@@ -140,8 +140,8 @@ const EmergingTechSlide: React.FC<SlideProps> = ({ title }) => {
                 </div>
                 <div className="mt-4 overflow-hidden">
                   {trends[activeCategory].links.map(link => (
-                    <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer" className="block mt-2 text-blue-500 hover:text-blue-700 overflow-hidden">
-                      <ExternalLink className="w-5 h-5 inline-block mr-2" />
+                    <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer" className="block mt-2 text-celestial-blue overflow-hidden">
+                      <ExternalLink className="w-5 h-5 text-celestial-blue inline-block mr-2" />
                       {link.text}
                     </a>
                   ))}

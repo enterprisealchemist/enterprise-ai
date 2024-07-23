@@ -24,7 +24,7 @@ const ComplexEnterpriseAnimation = () => {
 
     const nodes: { x: number; y: number; vx: number; vy: number; color: string; size: number }[] = [];
     const numNodes = 300;  // Increased number of nodes
-    const colors = ['#32213A', '#383B53', '#66717E', '#D4D6B9', '#D1CAA1',];
+    const colors = ['#669900', '#006699', '#990066', '#ff6600', '#ffcc00',];
 
     for (let i = 0; i < numNodes; i++) {
       nodes.push({

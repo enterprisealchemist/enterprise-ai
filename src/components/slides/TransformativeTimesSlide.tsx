@@ -27,14 +27,14 @@ const TransformativeTimesSlide: React.FC<SlideProps> = ({ title }) => {
   const nextStep = () => setStep(prev => Math.min(prev + 1, 7));
 
   return (
-    <div className="slide h-full flex flex-col overflow-hidden" onClick={nextStep}>
+    <div className="slide h-full flex flex-col overflow-hidden bg-white" onClick={nextStep}>
       <AnimatePresence>
         {step >= 0 && (
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="text-2xl font-semibold mb-2"
+            className="text-2xl font-semibold mb-2 text-space-cadet"
           >
             {title}
           </motion.h2>
@@ -48,7 +48,7 @@ const TransformativeTimesSlide: React.FC<SlideProps> = ({ title }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                className="text-md font-semibold mb-2"
+                className="text-md font-semibold mb-2 text-gray-600"
               >
                 Organizations that have adopted AI in at least 1 business function (%)
               </motion.h3>
@@ -64,13 +64,13 @@ const TransformativeTimesSlide: React.FC<SlideProps> = ({ title }) => {
               >
                 <ResponsiveContainer width="100%" height={300}>
                   <LineChart data={aiAdoptionData}>
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="year" />
-                    <YAxis />
-                    <Tooltip />
+                    <CartesianGrid strokeDasharray="3 3" stroke="#66717E" />
+                    <XAxis dataKey="year" stroke="#001219" />
+                    <YAxis stroke="#001219" />
+                    <Tooltip contentStyle={{ backgroundColor: '#fdfbf6', borderColor: '#001219' }} />
                     <Legend />
-                    <Line type="monotone" dataKey="adoption" stroke="#8884d8" name="AI Adoption" />
-                    <Line type="monotone" dataKey="generativeAI" stroke="#82ca9d" name="Generative AI" />
+                    <Line type="monotone" dataKey="adoption" stroke="#006699" name="AI Adoption" />
+                    <Line type="monotone" dataKey="generativeAI" stroke="#669900" name="Generative AI" />
                   </LineChart>
                 </ResponsiveContainer>
               </motion.div>
@@ -82,14 +82,14 @@ const TransformativeTimesSlide: React.FC<SlideProps> = ({ title }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                className="text-xs text-gray-500 mt-2 flex items-center overflow-hidden"
+                className="text-xs text-paynes-gray mt-2 flex items-center overflow-hidden"
               >
                 <span>Source: </span>
                 <a 
                   href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-blue-500 hover:underline flex items-center ml-1"
+                  className="text-celestial-blue hover:underline flex items-center ml-1"
                 >
                   McKinsey & Company
                   <ExternalLink className="w-3 h-3 ml-1" />
@@ -105,7 +105,7 @@ const TransformativeTimesSlide: React.FC<SlideProps> = ({ title }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                className="text-xl font-semibold mb-4"
+                className="text-xl font-semibold mb-4 text-rich-black"
               >
                 Observations
               </motion.h3>
@@ -120,8 +120,8 @@ const TransformativeTimesSlide: React.FC<SlideProps> = ({ title }) => {
                   exit={{ opacity: 0, x: 20 }}
                   className="mb-4 flex items-start overflow-hidden"
                 >
-                  <AlertCircle className="w-5 h-5 text-blue-500 mr-2 mt-1" />
-                  <h4 className="font-medium">{impact.title}</h4>
+                  <AlertCircle className="w-5 h-5 text-celestial-blue mr-2 mt-1" />
+                  <h4 className="font-medium text-space-cadet">{impact.title}</h4>
                 </motion.div>
               )}
             </AnimatePresence>

@@ -45,11 +45,11 @@ const DiscussionSlide: React.FC<SlideProps> = ({ title }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="bg-blue-100 p-4 rounded-lg mb-4"
+              className="bg-lapis-lazuli p-4 rounded-lg mb-4"
             >
-              <p className="text-sm text-gray-800 flex items-center">
-                <HelpCircle className="w-5 h-5 mr-2 text-blue-500" /> 
-                Topics we might explore with discussion:
+              <p className="text-md font-medium text-white flex items-center">
+                <HelpCircle className="w-5 h-5 mr-2 text-white-off" /> 
+                Some topics to explore...
               </p>
             </motion.div>
           )}
@@ -69,7 +69,7 @@ const DiscussionSlide: React.FC<SlideProps> = ({ title }) => {
                   onClick={() => toggleQuestion(index)}
                 >
                   <span className="font-medium text-sm flex items-center">
-                    <MessageCircle className="w-4 h-4 mr-2 text-gray-600" />
+                    <MessageCircle className="w-4 h-4 mr-2 text-avocado" />
                     {q.question}
                   </span>
                   {openQuestion === index ? 

@@ -10,19 +10,19 @@ const AlchemyAnalogySlide: React.FC<SlideProps> = ({ title }) => {
   const alchemyEnhancements = [
     {
       title: "Intelligence",
-      icon: <Brain className="w-8 h-8 text-purple-500" />
+      icon: <Brain className="w-8 h-8 text-celestial-blue" />
     },
     {
       title: "Creativity",
-      icon: <Lightbulb className="w-8 h-8 text-yellow-500" />
+      icon: <Lightbulb className="w-8 h-8 text-jonquil" />
     },
     {
       title: "Collaboration",
-      icon: <Users className="w-8 h-8 text-green-500" />
+      icon: <Users className="w-8 h-8 text-avocado" />
     },
     {
       title: "Learning",
-      icon: <Rocket className="w-8 h-8 text-blue-500" />
+      icon: <Rocket className="w-8 h-8 text-orange-peel" />
     }
   ];
 
@@ -59,10 +59,10 @@ const AlchemyAnalogySlide: React.FC<SlideProps> = ({ title }) => {
               className="flex items-start mb-6 overflow-hidden"
             >
               <div className="flex items-start mb-6 overflow-hidden">
-                <Beaker className="w-8 h-8 text-gray-400 mr-2 flex-shrink-0 mt-1" />
-                <blockquote className="italic text-gray-600 overflow-hidden">
+                <Beaker className="w-8 h-8 text-red-violet mr-2 flex-shrink-0 mt-1" />
+                <blockquote className="italic text-paynes-gray overflow-hidden">
                   "Alchemy neither composes nor mixes: it increases and activates that which already exists in a latent state."
-                  <footer className="text-sm mt-2 text-gray-500">
+                  <footer className="text-sm mt-2 text-paynes-gray">
                     — Franz Hartmann, German medical doctor and one of the most important theosophical writers of the 19<sup>th</sup> century
                   </footer>
                 </blockquote>

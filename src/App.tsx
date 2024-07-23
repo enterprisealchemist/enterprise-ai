@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import PresentationSkeleton from './components/PresentationSkeleton';
 import IntroductionSlide from './components/slides/IntroductionSlide';
 import CurrentStateSlide from './components/slides/CurrentStateSlide';
-import KeyPatternsSlide from './components/slides/KeyPatternsSlide';
 import TransformativeTimesSlide from './components/slides/TransformativeTimesSlide';
+import KeyPatternsSlide from './components/slides/KeyPatternsSlide';
+import RisksChallengesSlide from './components/slides/RisksChallengesSlide';
 import CaseStudySlide from './components/slides/CaseStudySlide';
-import AlchemyAnalogySlide from './components/slides/AlchemyAnalogySlide';
 import EmergingTechSlide from './components/slides/EmergingTechSlide';
+import AlchemyAnalogySlide from './components/slides/AlchemyAnalogySlide';
 import ConclusionSlide from './components/slides/ConclusionSlide';
 import DiscussionSlide from './components/slides/DiscussionSlide';
 
@@ -48,6 +49,12 @@ const App: React.FC = () => {
       component: EmergingTechSlide, 
       props: { 
         title: "Emerging Technologies"
+      } 
+    },
+    { 
+      component: RisksChallengesSlide, 
+      props: { 
+        title: "Risks and Challenges"
       } 
     },
     { 

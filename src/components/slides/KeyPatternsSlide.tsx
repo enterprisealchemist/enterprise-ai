@@ -19,27 +19,27 @@ const KeyPatternsSlide: React.FC<SlideProps> = ({ title }) => {
   const patterns = [
     {
       name: "Machine Learning",
-      icon: <Zap className="w-8 h-8 text-blue-500" />,
+      icon: <Zap className="w-8 h-8 text-jonquil" />,
       image: machineLearningImg
     },
     {
       name: "Natural Language Processing (NLP)",
-      icon: <MessageSquare className="w-8 h-8 text-green-500" />,
+      icon: <MessageSquare className="w-8 h-8 text-avocado" />,
       image: nlpImg
     },
     {
       name: "Predictive Analytics",
-      icon: <TrendingUp className="w-8 h-8 text-purple-500" />,
+      icon: <TrendingUp className="w-8 h-8 text-pumpkin" />,
       image: predictiveAnalyticsImg
     },
     {
       name: "Computer Vision",
-      icon: <Eye className="w-8 h-8 text-red-500" />,
+      icon: <Eye className="w-8 h-8 text-red-violet" />,
       image: computerVisionImg
     },
     {
       name: "Robotic Process Automation (RPA)",
-      icon: <Bot className="w-8 h-8 text-orange-500" />,
+      icon: <Bot className="w-8 h-8 text-celestial-blue" />,
       image: rpaImg
     }
   ];
@@ -61,14 +61,14 @@ const KeyPatternsSlide: React.FC<SlideProps> = ({ title }) => {
   };
 
   return (
-    <div className="slide h-full flex flex-col overflow-hidden" onClick={nextStep}>
+    <div className="slide h-full flex flex-col overflow-hidden bg-white" onClick={nextStep}>
       <AnimatePresence>
         {step >= 0 && (
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="text-2xl font-semibold mb-4"
+            className="text-2xl font-semibold mb-4 text-space-cadet"
           >
             {title}
           </motion.h2>
@@ -84,7 +84,7 @@ const KeyPatternsSlide: React.FC<SlideProps> = ({ title }) => {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 20 }}
                   className={`p-2 rounded transition-colors duration-200 ${
-                    index === activeIndex ? 'bg-blue-100' : 'bg-gray-100 hover:bg-gray-200'
+                    index === activeIndex ? 'bg-gray-200' : 'bg-white-cream hover:bg-gray-200'
                   } ${index < step ? 'cursor-pointer' : ''}`}
                   onClick={(e) => {
                     e.stopPropagation();
@@ -93,14 +93,14 @@ const KeyPatternsSlide: React.FC<SlideProps> = ({ title }) => {
                 >
                   <div className="flex items-center">
                     {tech.icon}
-                    <h3 className="text-lg font-medium ml-2">{tech.name}</h3>
+                    <h3 className="text-lg font-medium ml-2 text-gray-700">{tech.name}</h3>
                   </div>
                 </motion.div>
               )}
             </AnimatePresence>
           ))}
         </div>
-        <div className="w-1/2 bg-white-100 p-4 rounded flex items-center justify-center overflow-hidden">
+        <div className="w-1/2 bg-white p-4 rounded flex items-center justify-center overflow-hidden">
           <AnimatePresence mode="wait">
             {step > 0 && (
               <motion.div
