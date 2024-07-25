@@ -30,11 +30,21 @@ const AlchemyAnalogySlide: React.FC<SlideProps> = ({ title }) => {
 
   return (
     <div className="slide h-full flex flex-col relative overflow-hidden" onClick={nextStep}>
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="scale-100 opacity-40">
-          <AlchemySymbolAnimation />
-        </div>
-      </div>
+      <AnimatePresence>
+        {step >= 1 && (
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <motion.div 
+              initial={{ scale: 0, opacity: 0 }} 
+              animate={{ scale: 1, opacity: 0.4 }} 
+              exit={{ scale: 0, opacity: 0 }} 
+              transition={{ duration: 2 }} 
+              className="scale-100 opacity-40"
+            >
+              <AlchemySymbolAnimation />
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
   
       <div className="z-10 relative overflow-hidden flex flex-col h-full">
         <AnimatePresence>

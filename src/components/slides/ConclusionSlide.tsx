@@ -55,6 +55,7 @@ const ConclusionSlide: React.FC<SlideProps> = ({ title }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 2 }}
               className="bg-white p-4 rounded-lg mb-6 flex items-center justify-center"
             >
               <blockquote className="border-l-4 border-lapis-lazuli pl-6 py-2 italic text-paynes-gray max-w-3xl text-xl text-center">
